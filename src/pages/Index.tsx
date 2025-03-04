@@ -49,15 +49,26 @@ const Index = () => {
               <h2 className="text-3xl font-bold neon-glow">Sobre mí</h2>
             </div>
             <div className="space-y-6 text-foreground/80 card-gradient p-8 rounded-xl">
-              <p>
-                Soy un desarrollador web junior apasionado por crear experiencias digitales únicas.
-                Mi viaje en la programación comenzó con la curiosidad por entender cómo funcionan las
-                aplicaciones web que usamos todos los días.
-              </p>
-              <p>
-                Actualmente, me especializo en tecnologías frontend como React, TypeScript y Tailwind CSS.
-                Estoy constantemente aprendiendo y mejorando mis habilidades para convertirme en un mejor desarrollador.
-              </p>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <p className="mb-4">
+                    Soy un desarrollador web junior apasionado por crear experiencias digitales únicas.
+                    Mi viaje en la programación comenzó con la curiosidad por entender cómo funcionan las
+                    aplicaciones web que usamos todos los días.
+                  </p>
+                  <p>
+                    Actualmente, me especializo en tecnologías frontend como React, TypeScript y Tailwind CSS.
+                    Estoy constantemente aprendiendo y mejorando mis habilidades para convertirme en un mejor desarrollador.
+                  </p>
+                </div>
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80" 
+                    alt="Código en pantalla" 
+                    className="rounded-lg shadow-xl glow-on-hover"
+                  />
+                </div>
+              </div>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6">
                 <div className="p-6 rounded-lg card-gradient glow-on-hover">
                   <div className="flex items-center gap-2 mb-3">
@@ -95,6 +106,11 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Project Card 1 */}
               <div className="group card-gradient rounded-xl overflow-hidden glow-on-hover">
+                <img 
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" 
+                  alt="Project 1" 
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-8">
                   <Code className="w-10 h-10 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
@@ -118,6 +134,11 @@ const Index = () => {
               
               {/* Project Card 2 */}
               <div className="group card-gradient rounded-xl overflow-hidden glow-on-hover">
+                <img 
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" 
+                  alt="Project 2" 
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-8">
                   <Code className="w-10 h-10 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
