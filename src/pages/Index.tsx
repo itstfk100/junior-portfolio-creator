@@ -1,7 +1,20 @@
-
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ExternalLink, Code, User, Briefcase } from "lucide-react";
+import { 
+  Github, 
+  Linkedin, 
+  Mail, 
+  ExternalLink, 
+  Code, 
+  User, 
+  Briefcase,
+  Binary,
+  Database,
+  Layout,
+  Terminal,
+  Laptop,
+  Globe
+} from "lucide-react";
 
 const Index = () => {
   return (
@@ -47,15 +60,24 @@ const Index = () => {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6">
                 <div className="p-6 rounded-lg card-gradient glow-on-hover">
-                  <h3 className="font-bold text-primary mb-2">Frontend</h3>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Layout className="w-5 h-5 text-primary" />
+                    <h3 className="font-bold text-primary">Frontend</h3>
+                  </div>
                   <p className="text-sm">React, TypeScript, Tailwind CSS</p>
                 </div>
                 <div className="p-6 rounded-lg card-gradient glow-on-hover">
-                  <h3 className="font-bold text-primary mb-2">Backend</h3>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Database className="w-5 h-5 text-primary" />
+                    <h3 className="font-bold text-primary">Backend</h3>
+                  </div>
                   <p className="text-sm">Node.js, Express, SQL</p>
                 </div>
                 <div className="p-6 rounded-lg card-gradient glow-on-hover">
-                  <h3 className="font-bold text-primary mb-2">Herramientas</h3>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Terminal className="w-5 h-5 text-primary" />
+                    <h3 className="font-bold text-primary">Herramientas</h3>
+                  </div>
                   <p className="text-sm">Git, VSCode, Figma</p>
                 </div>
               </div>
