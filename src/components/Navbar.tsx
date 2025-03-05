@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Home, User, Briefcase, Mail } from 'lucide-react';
+import { Menu, X, Home, User, Briefcase, Mail, FileText } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Navbar = () => {
@@ -22,6 +22,12 @@ const Navbar = () => {
     { name: 'Contacto', icon: <Mail className="w-4 h-4" />, href: '#contact' },
   ];
 
+  const handleDownloadCV = () => {
+    // Replace with your actual CV file path
+    const cvUrl = '/CV.pdf';
+    window.open(cvUrl, '_blank');
+  };
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass-nav' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +37,7 @@ const Navbar = () => {
           </div>
           
           {/* Desktop menu */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex md:items-center">
             <div className="ml-10 flex items-center space-x-4">
               {menuItems.map((item) => (
                 <a
@@ -43,6 +49,14 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
+              <Button
+                onClick={handleDownloadCV}
+                variant="outline"
+                className="flex items-center gap-2 ml-4"
+              >
+                <FileText className="w-4 h-4" />
+                Descargar CV
+              </Button>
             </div>
           </div>
           
@@ -79,6 +93,14 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            <Button
+              onClick={handleDownloadCV}
+              variant="outline"
+              className="flex items-center gap-2 w-full justify-center"
+            >
+              <FileText className="w-4 h-4" />
+              Descargar CV
+            </Button>
           </div>
         </div>
       )}
