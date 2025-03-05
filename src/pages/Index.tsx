@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import TechStack from "@/components/TechStack";
 import { Button } from "@/components/ui/button";
 import { 
   Github, 
@@ -96,6 +97,8 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <TechStack />
         
         {/* Projects Section */}
         <section id="projects" className="section-padding min-h-screen animate-fade-in [animation-delay:400ms]">
