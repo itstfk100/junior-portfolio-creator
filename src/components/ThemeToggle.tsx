@@ -12,18 +12,23 @@ const ThemeToggle = () => {
     root.classList.add(theme);
   }, [theme]);
 
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-full hover:text-primary"
+      onClick={toggleTheme}
+      className="rounded-full hover:text-primary transition-colors"
     >
       {theme === "dark" ? (
         <Sun className="h-5 w-5 animate-scale-in" />
       ) : (
         <Moon className="h-5 w-5 animate-scale-in" />
       )}
+      <span className="sr-only">Toggle theme</span>
     </Button>
   );
 };
