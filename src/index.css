@@ -50,6 +50,28 @@
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @layer utilities {
   .glass-nav {
     @apply bg-background/60 backdrop-blur-md border-b border-white/10;
@@ -73,6 +95,19 @@
     box-shadow: 0 0 15px hsl(var(--primary));
     transform: translateY(-2px);
     transition: all 0.3s ease;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  .animate-hover {
+    @apply transition-all duration-300 hover:scale-105;
   }
 }
 

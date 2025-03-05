@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { 
   Github, 
@@ -29,7 +30,7 @@ const Index = () => {
         <Navbar />
         
         {/* Hero Section */}
-        <section id="home" className="section-padding min-h-screen flex items-center justify-center">
+        <section id="home" className="section-padding min-h-screen flex items-center justify-center animate-fade-in">
           <div className="text-center">
             <p className="text-primary mb-4 neon-glow">Hola, soy</p>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 typewriter neon-glow">
@@ -42,7 +43,7 @@ const Index = () => {
         </section>
         
         {/* About Section */}
-        <section id="about" className="section-padding min-h-screen">
+        <section id="about" className="section-padding min-h-screen animate-fade-in [animation-delay:200ms]">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-8">
               <User className="w-6 h-6 text-primary neon-glow" />
@@ -97,7 +98,7 @@ const Index = () => {
         </section>
         
         {/* Projects Section */}
-        <section id="projects" className="section-padding min-h-screen">
+        <section id="projects" className="section-padding min-h-screen animate-fade-in [animation-delay:400ms]">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-8">
               <Briefcase className="w-6 h-6 text-primary neon-glow" />
@@ -164,7 +165,7 @@ const Index = () => {
         </section>
         
         {/* Contact Section */}
-        <section id="contact" className="section-padding min-h-screen">
+        <section id="contact" className="section-padding min-h-screen animate-fade-in [animation-delay:600ms]">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-8">
               <Mail className="w-6 h-6 text-primary neon-glow" />
@@ -191,6 +192,8 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <Footer />
       </div>
     </div>
   );
