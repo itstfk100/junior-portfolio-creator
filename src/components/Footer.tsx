@@ -1,20 +1,26 @@
 
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Briefcase } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
     <footer className="bg-background/50 backdrop-blur-md border-t border-white/10">
-      <div className="max-w-4xl mx-auto py-12 px-6">
-        <div className="grid md:grid-cols-3 gap-8 items-start">
-          <div className="text-center md:text-left">
-            <h3 className="text-lg font-semibold text-primary mb-2">Portfolio</h3>
-            <p className="text-sm text-foreground/60">
-              Diseñado y desarrollado con ❤️
-            </p>
+      <div className="max-w-6xl mx-auto py-12 px-6">
+        <div className="grid md:grid-cols-4 gap-8 items-start">
+          {/* Portfolio Section */}
+          <div className="text-center md:text-left col-span-1">
+            <h3 className="text-lg font-semibold text-primary mb-4">Explora mi Portfolio</h3>
+            <div className="flex flex-col gap-2">
+              <a href="#home" className="text-sm text-foreground/60 hover:text-primary transition-colors">Inicio</a>
+              <a href="#about" className="text-sm text-foreground/60 hover:text-primary transition-colors">Sobre Mí</a>
+              <a href="#projects" className="text-sm text-foreground/60 hover:text-primary transition-colors">Proyectos</a>
+              <a href="#contact" className="text-sm text-foreground/60 hover:text-primary transition-colors">Contacto</a>
+            </div>
           </div>
-          
-          <div className="text-center space-y-4">
+
+          {/* Social Links */}
+          <div className="text-center space-y-4 col-span-1">
+            <h3 className="text-lg font-semibold text-primary mb-4">Redes Sociales</h3>
             <div className="flex justify-center gap-4">
               <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
                 <Github className="w-5 h-5" />
@@ -28,7 +34,8 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="text-center md:text-right space-y-2">
+          {/* Contact Info */}
+          <div className="text-center md:text-right space-y-2 col-span-2">
             <div className="flex items-center justify-end gap-2">
               <MapPin className="w-4 h-4 text-primary" />
               <p className="text-sm text-foreground/60">Ciudad, País</p>

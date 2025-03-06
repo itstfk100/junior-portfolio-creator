@@ -1,63 +1,89 @@
 
-import { Binary, Code, Database, Globe, Layout, Terminal } from "lucide-react";
+import {
+  Code,
+  Database,
+  Globe,
+  Layout,
+  Terminal,
+  Binary,
+  Laptop,
+  Server,
+  Cpu,
+  Cloud
+} from "lucide-react";
 
 const technologies = [
   {
     category: "Frontend",
-    icon: <Layout className="w-6 h-6 text-primary" />,
+    icon: <Layout className="w-8 h-8 text-primary" />,
     skills: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+    bgGlow: "from-blue-500/20 to-purple-500/20"
   },
   {
     category: "Backend",
-    icon: <Terminal className="w-6 h-6 text-primary" />,
+    icon: <Server className="w-8 h-8 text-primary" />,
     skills: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
+    bgGlow: "from-green-500/20 to-emerald-500/20"
   },
   {
     category: "Languages",
-    icon: <Code className="w-6 h-6 text-primary" />,
+    icon: <Code className="w-8 h-8 text-primary" />,
     skills: ["JavaScript", "TypeScript", "Python", "Java"],
+    bgGlow: "from-yellow-500/20 to-orange-500/20"
   },
   {
     category: "Database",
-    icon: <Database className="w-6 h-6 text-primary" />,
+    icon: <Database className="w-8 h-8 text-primary" />,
     skills: ["MySQL", "MongoDB", "PostgreSQL", "Redis"],
+    bgGlow: "from-red-500/20 to-pink-500/20"
   },
   {
     category: "Tools",
-    icon: <Binary className="w-6 h-6 text-primary" />,
+    icon: <Cpu className="w-8 h-8 text-primary" />,
     skills: ["Git", "Docker", "AWS", "Linux"],
+    bgGlow: "from-purple-500/20 to-indigo-500/20"
   },
   {
     category: "Other",
-    icon: <Globe className="w-6 h-6 text-primary" />,
+    icon: <Cloud className="w-8 h-8 text-primary" />,
     skills: ["REST APIs", "GraphQL", "CI/CD", "Agile"],
-  },
+    bgGlow: "from-teal-500/20 to-cyan-500/20"
+  }
 ];
 
 const TechStack = () => {
   return (
     <section id="tech-stack" className="section-padding min-h-screen animate-fade-in [animation-delay:300ms]">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-2 mb-8">
-          <Code className="w-6 h-6 text-primary neon-glow" />
+          <Laptop className="w-6 h-6 text-primary neon-glow" />
           <h2 className="text-3xl font-bold neon-glow">Tech Stack</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {technologies.map((tech) => (
-            <div key={tech.category} className="card-gradient p-6 rounded-xl animate-hover">
-              <div className="flex items-center gap-3 mb-4">
-                {tech.icon}
-                <h3 className="text-lg font-semibold text-primary">{tech.category}</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {tech.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 rounded-full bg-background/50 text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
+            <div
+              key={tech.category}
+              className={`card-gradient p-6 rounded-xl animate-hover relative overflow-hidden group`}
+            >
+              {/* Background glow effect */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${tech.bgGlow} opacity-50 blur-xl group-hover:opacity-75 transition-opacity`} />
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-4">
+                  {tech.icon}
+                  <h3 className="text-lg font-semibold text-primary">{tech.category}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {tech.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 rounded-full bg-background/50 text-sm border border-primary/20 hover:border-primary/40 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
