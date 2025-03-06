@@ -73,7 +73,7 @@
   }
   
   .section-padding {
-    @apply py-20 px-6 md:px-12 lg:px-24;
+    @apply py-16 px-6 md:px-12 lg:px-24;
   }
 
   .neon-glow {
@@ -103,6 +103,17 @@
 
   .animate-hover {
     @apply transition-all duration-300 hover:scale-105;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

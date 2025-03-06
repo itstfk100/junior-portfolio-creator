@@ -1,10 +1,9 @@
-
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section id="contact" className="section-padding min-h-screen animate-fade-in [animation-delay:600ms]">
+    <section id="contact" className="section-padding pb-10 animate-fade-in [animation-delay:600ms]">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-2 mb-8">
           <Mail className="w-6 h-6 text-primary neon-glow" />
