@@ -1,56 +1,37 @@
 
-import { User, Layout, Database, Terminal } from "lucide-react";
+import { User } from "lucide-react";
 
 const About = () => {
   return (
     <section id="about" className="section-padding min-h-screen animate-fade-in [animation-delay:200ms]">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-2 mb-8">
           <User className="w-6 h-6 text-primary neon-glow" />
           <h2 className="text-3xl font-bold neon-glow">Sobre mí</h2>
         </div>
-        <div className="space-y-6 text-foreground/80 card-gradient p-8 rounded-xl">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <p className="mb-4">
+        <div className="space-y-6 text-foreground/80 card-gradient p-12 rounded-xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <p className="text-lg">
                 Soy un desarrollador web junior apasionado por crear experiencias digitales únicas.
                 Mi viaje en la programación comenzó con la curiosidad por entender cómo funcionan las
                 aplicaciones web que usamos todos los días.
               </p>
-              <p>
+              <p className="text-lg">
                 Actualmente, me especializo en tecnologías frontend como React, TypeScript y Tailwind CSS.
                 Estoy constantemente aprendiendo y mejorando mis habilidades para convertirme en un mejor desarrollador.
+              </p>
+              <p className="text-lg">
+                Mi objetivo es crear aplicaciones web que no solo sean funcionales sino también intuitivas y agradables
+                para el usuario. Me apasiona resolver problemas y encontrar soluciones creativas a desafíos técnicos.
               </p>
             </div>
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80" 
                 alt="Código en pantalla" 
-                className="rounded-lg shadow-xl glow-on-hover"
+                className="rounded-lg shadow-xl glow-on-hover w-full"
               />
-            </div>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6">
-            <div className="p-6 rounded-lg card-gradient glow-on-hover">
-              <div className="flex items-center gap-2 mb-3">
-                <Layout className="w-5 h-5 text-primary" />
-                <h3 className="font-bold text-primary">Frontend</h3>
-              </div>
-              <p className="text-sm">React, TypeScript, Tailwind CSS</p>
-            </div>
-            <div className="p-6 rounded-lg card-gradient glow-on-hover">
-              <div className="flex items-center gap-2 mb-3">
-                <Database className="w-5 h-5 text-primary" />
-                <h3 className="font-bold text-primary">Backend</h3>
-              </div>
-              <p className="text-sm">Node.js, Express, SQL</p>
-            </div>
-            <div className="p-6 rounded-lg card-gradient glow-on-hover">
-              <div className="flex items-center gap-2 mb-3">
-                <Terminal className="w-5 h-5 text-primary" />
-                <h3 className="font-bold text-primary">Herramientas</h3>
-              </div>
-              <p className="text-sm">Git, VSCode, Figma</p>
             </div>
           </div>
         </div>
