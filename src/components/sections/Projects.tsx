@@ -42,7 +42,7 @@ const Projects = () => {
           <Briefcase className="w-6 h-6 text-primary neon-glow" />
           <h2 className="text-3xl font-bold neon-glow">Mis Proyectos</h2>
         </div>
-        
+
         <div className="relative">
           <AnimatePresence mode="wait">
             <motion.div
@@ -51,19 +51,15 @@ const Projects = () => {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -300, opacity: 0 }}
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
-              className="card-gradient rounded-xl overflow-hidden glow-on-hover relative backdrop-blur-sm border border-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+              className="flex flex-col md:flex-row items-center gap-8 rounded-xl overflow-hidden glow-on-hover relative backdrop-blur-sm border border-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.5)] p-6"
             >
-              <img 
-                src={projects[currentProject].image}
-                alt={projects[currentProject].title}
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
+              {/* Descripción a la izquierda */}
+              <div className="md:w-1/2 text-left">
                 <Code className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-2xl font-bold mb-4 text-primary">
+                <h3 className="text-3xl font-bold mb-4 text-primary">
                   {projects[currentProject].title}
                 </h3>
-                <p className="text-foreground/80 mb-6">
+                <p className="text-lg text-foreground/80 mb-6">
                   {projects[currentProject].description}
                 </p>
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -87,9 +83,19 @@ const Projects = () => {
                   </Button>
                 </div>
               </div>
+
+              {/* Imagen a la derecha */}
+              <div className="md:w-1/2">
+                <img
+                  src={projects[currentProject].image}
+                  alt={projects[currentProject].title}
+                  className="w-full h-64 object-cover rounded-lg shadow-lg"
+                />
+              </div>
             </motion.div>
           </AnimatePresence>
-          
+
+          {/* Controles de navegación */}
           <div className="flex justify-center gap-4 mt-6">
             <Button
               variant="outline"
