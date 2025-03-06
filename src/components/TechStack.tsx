@@ -63,10 +63,10 @@ const TechStack = () => {
           {technologies.map((tech) => (
             <div
               key={tech.category}
-              className={`card-gradient p-6 rounded-xl animate-hover relative overflow-hidden group`}
+              className="card-gradient p-6 rounded-xl relative overflow-hidden shadow-[0_0_20px_rgba(59,130,246,0.3)] border border-primary/20"
             >
               {/* Background glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${tech.bgGlow} opacity-50 blur-xl group-hover:opacity-75 transition-opacity`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${tech.bgGlow} opacity-50 blur-xl transition-all duration-500 animate-pulse`} />
               
               {/* Content */}
               <div className="relative z-10">
@@ -78,7 +78,7 @@ const TechStack = () => {
                   {tech.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 rounded-full bg-background/50 text-sm border border-primary/20 hover:border-primary/40 transition-colors"
+                      className="px-3 py-1 rounded-full bg-background/50 text-sm border border-primary/20 shadow-[0_0_10px_rgba(59,130,246,0.2)] hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-shadow"
                     >
                       {skill}
                     </span>

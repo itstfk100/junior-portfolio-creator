@@ -1,7 +1,7 @@
-
 import { Briefcase, Github, ExternalLink, Code, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
@@ -44,49 +44,58 @@ const Projects = () => {
         </div>
         
         <div className="relative">
-          <div className="card-gradient rounded-xl overflow-hidden glow-on-hover relative backdrop-blur-sm">
-            <img 
-              src={projects[currentProject].image}
-              alt={projects[currentProject].title}
-              className="w-full h-64 object-cover"
-            />
-            <div className="p-8">
-              <Code className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4 text-primary">
-                {projects[currentProject].title}
-              </h3>
-              <p className="text-foreground/80 mb-6">
-                {projects[currentProject].description}
-              </p>
-              <div className="flex flex-wrap gap-3 mb-6">
-                {projects[currentProject].tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm border border-primary/20"
-                  >
-                    {tech}
-                  </span>
-                ))}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentProject}
+              initial={{ x: 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -300, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              className="card-gradient rounded-xl overflow-hidden glow-on-hover relative backdrop-blur-sm border border-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+            >
+              <img 
+                src={projects[currentProject].image}
+                alt={projects[currentProject].title}
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <Code className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-2xl font-bold mb-4 text-primary">
+                  {projects[currentProject].title}
+                </h3>
+                <p className="text-foreground/80 mb-6">
+                  {projects[currentProject].description}
+                </p>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  {projects[currentProject].tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm border border-primary/20 shadow-[0_0_10px_rgba(59,130,246,0.3)]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-4">
+                  <Button variant="default" size="lg" className="gap-2 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                    <ExternalLink className="w-4 h-4" />
+                    Proyecto
+                  </Button>
+                  <Button variant="outline" size="lg" className="gap-2 shadow-[0_0_10px_rgba(59,130,246,0.3)]">
+                    <Github className="w-4 h-4" />
+                    GitHub
+                  </Button>
+                </div>
               </div>
-              <div className="flex gap-4">
-                <Button variant="default" size="lg" className="gap-2">
-                  <ExternalLink className="w-4 h-4" />
-                  Proyecto
-                </Button>
-                <Button variant="outline" size="lg" className="gap-2">
-                  <Github className="w-4 h-4" />
-                  GitHub
-                </Button>
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          </AnimatePresence>
           
           <div className="flex justify-center gap-4 mt-6">
             <Button
               variant="outline"
               size="icon"
               onClick={prevProject}
-              className="rounded-full hover:bg-primary/20"
+              className="rounded-full hover:bg-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.3)]"
             >
               <ArrowLeft className="w-6 h-6" />
             </Button>
@@ -94,7 +103,7 @@ const Projects = () => {
               variant="outline"
               size="icon"
               onClick={nextProject}
-              className="rounded-full hover:bg-primary/20"
+              className="rounded-full hover:bg-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.3)]"
             >
               <ArrowRight className="w-6 h-6" />
             </Button>
