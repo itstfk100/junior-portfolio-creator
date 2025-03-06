@@ -37,27 +37,32 @@ const Navbar = () => {
           </div>
           
           {/* Desktop menu */}
-          <div className="hidden md:flex md:items-center">
-            <div className="ml-10 flex items-center space-x-4">
-              {menuItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center gap-2 text-foreground/80 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  {item.icon}
-                  {item.name}
-                </a>
-              ))}
-              <Button
-                onClick={handleDownloadCV}
-                variant="outline"
-                className="flex items-center gap-2 ml-4"
-              >
-                <FileText className="w-4 h-4" />
-                Descargar CV
-              </Button>
+          <div className="hidden md:flex md:flex-1 md:justify-center md:items-center">
+            <div className="relative px-6 py-2 rounded-full bg-secondary/30 backdrop-blur-sm border border-primary/20 shadow-[0_0_15px_rgba(147,51,234,0.1)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(147,51,234,0.2)] hover:border-primary/30">
+              <div className="flex items-center space-x-6">
+                {menuItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="flex items-center gap-2 text-foreground/80 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  >
+                    {item.icon}
+                    {item.name}
+                  </a>
+                ))}
+              </div>
             </div>
+          </div>
+
+          <div className="hidden md:flex md:items-center">
+            <Button
+              onClick={handleDownloadCV}
+              variant="outline"
+              className="flex items-center gap-2 ml-4"
+            >
+              <FileText className="w-4 h-4" />
+              Descargar CV
+            </Button>
           </div>
           
           {/* Mobile menu button */}
@@ -79,31 +84,29 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden glass-nav">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {menuItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="flex items-center gap-2 text-foreground/80 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.icon}
-                {item.name}
-              </a>
-            ))}
-            <Button
-              onClick={handleDownloadCV}
-              variant="outline"
-              className="flex items-center gap-2 w-full justify-center"
+      <div className={`md:hidden glass-nav ${isOpen ? 'block' : 'hidden'}`}>
+        <div className="px-2 pt-2 pb-3 space-y-1">
+          {menuItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="flex items-center gap-2 text-foreground/80 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsOpen(false)}
             >
-              <FileText className="w-4 h-4" />
-              Descargar CV
-            </Button>
-          </div>
+              {item.icon}
+              {item.name}
+            </a>
+          ))}
+          <Button
+            onClick={handleDownloadCV}
+            variant="outline"
+            className="flex items-center gap-2 w-full justify-center"
+          >
+            <FileText className="w-4 h-4" />
+            Descargar CV
+          </Button>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
