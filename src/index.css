@@ -35,13 +35,7 @@
   }
   
   body {
-    @apply bg-background text-foreground font-inter antialiased;
-    background: linear-gradient(135deg, 
-      hsla(222, 47%, 11%, 1) 0%, 
-      hsla(262, 83%, 58%, 0.5) 50%,
-      hsla(222, 47%, 11%, 1) 100%
-    );
-    background-attachment: fixed;
+    @apply bg-[#0d0d15] text-foreground font-inter antialiased;
   }
 }
 
