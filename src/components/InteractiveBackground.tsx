@@ -18,9 +18,9 @@ const InteractiveBackground = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-[#0d0d15]">
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-[#0d0d15] via-[#1a1a2e] to-[#262640]">
       <motion.div
-        className="absolute w-[500px] h-[500px] rounded-full bg-violet-500/20 blur-[100px]"
+        className="absolute w-[500px] h-[500px] rounded-full bg-violet-500/10 blur-[100px]"
         animate={{
           x: mousePosition.x - 250,
           y: mousePosition.y - 250,
@@ -32,7 +32,7 @@ const InteractiveBackground = () => {
         }}
       />
       <motion.div
-        className="absolute w-[400px] h-[400px] rounded-full bg-blue-500/20 blur-[100px]"
+        className="absolute w-[400px] h-[400px] rounded-full bg-blue-500/10 blur-[100px]"
         animate={{
           x: mousePosition.x - 200,
           y: mousePosition.y - 200,
@@ -44,7 +44,7 @@ const InteractiveBackground = () => {
         }}
       />
       <motion.div
-        className="absolute w-[300px] h-[300px] rounded-full bg-cyan-500/20 blur-[100px]"
+        className="absolute w-[300px] h-[300px] rounded-full bg-cyan-500/10 blur-[100px]"
         animate={{
           x: mousePosition.x - 150,
           y: mousePosition.y - 150,
