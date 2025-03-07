@@ -1,4 +1,3 @@
-
 import {
   Code,
   Database,
@@ -55,9 +54,9 @@ const TechStack = () => {
   return (
     <section id="tech-stack" className="section-padding min-h-screen animate-fade-in [animation-delay:300ms]">
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center gap-2 mb-8">
-          <Laptop className="w-6 h-6 text-primary neon-glow" />
-          <h2 className="text-3xl font-bold neon-glow">Tech Stack</h2>
+        <div className="flex items-center justify-center gap-3 mb-12">
+          <Laptop className="w-8 h-8 text-primary neon-glow" />
+          <h2 className="text-4xl md:text-5xl font-bold neon-glow">Tech Stack</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {technologies.map((tech) => (
