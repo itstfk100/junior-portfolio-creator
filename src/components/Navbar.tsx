@@ -54,7 +54,12 @@ const Navbar = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className={`flex items-center gap-2 px-3 py-1.5 rounded-md font-medium transition-all duration-300 relative ${activeSection === item.id ? 'text-primary border-b-2 border-primary' : 'text-foreground/80 hover:text-primary hover:border-b-2 hover:border-primary'}`}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-md font-medium transition-all duration-300 relative 
+                  ${activeSection === item.id ? 'text-primary' : 'text-foreground/80 hover:text-primary'}
+                  before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-0.5 
+                  before:bg-gradient-to-r before:from-purple-400 before:via-blue-400 before:to-pink-400
+                  before:transform before:origin-left
+                  before:animate-[navline_2s_linear_infinite]`}
                   >
                     {item.icon}
                     {item.name}

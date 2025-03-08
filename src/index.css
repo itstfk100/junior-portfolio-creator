@@ -151,3 +151,18 @@
   from, to { border-color: transparent }
   50% { border-color: hsl(var(--primary)) }
 }
+
+@keyframes navline {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}

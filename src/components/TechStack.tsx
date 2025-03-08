@@ -55,8 +55,10 @@ const TechStack = () => {
     <section id="tech-stack" className="section-padding min-h-screen animate-fade-in [animation-delay:300ms]">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-12">
-          <Laptop className="w-8 h-8 text-primary neon-glow" />
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">Tech Stack</h2>
+          <Laptop className="w-12 h-12 text-primary neon-glow animate-pulse" />
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+            Tech Stack
+          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {technologies.map((tech) => (

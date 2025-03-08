@@ -42,14 +42,14 @@ const Footer = () => {
               <Briefcase className="w-6 h-6 mr-2" /> Descargar CV
             </Button>
             <div className="mt-6 flex justify-center md:justify-end gap-6">
-              <Button variant="ghost" className="rounded-full hover:text-primary">
-                <Github className="w-7 h-7" />
+              <Button variant="ghost" className="rounded-full hover:text-primary w-14 h-14">
+                <Github className="w-8 h-8" />
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
-                <Linkedin className="w-7 h-7" />
+              <Button variant="ghost" size="icon" className="rounded-full hover:text-primary w-14 h-14">
+                <Linkedin className="w-8 h-8" />
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
-                <Mail className="w-7 h-7" />
+              <Button variant="ghost" size="icon" className="rounded-full hover:text-primary w-14 h-14">
+                <Mail className="w-8 h-8" />
               </Button>
             </div>
           </div>
