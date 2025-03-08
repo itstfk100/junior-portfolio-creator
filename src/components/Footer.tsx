@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 const Footer = () => {
   return (
     <footer className="bg-background/50 backdrop-blur-md border-t border-white/10">
-      <div className="max-w-6xl mx-auto py-16 px-8">
+      <div className="max-w-6xl mx-auto py-6 px-4">
         <div className="grid md:grid-cols-3 gap-12 items-start text-lg">
           {/* Portfolio Section */}
           <div className="text-center md:text-left">
@@ -22,15 +22,15 @@ const Footer = () => {
             <div className="flex flex-col items-center gap-3">
               <div className="flex items-center gap-3">
                 <MapPin className="w-6 h-6 text-primary" />
-                <p className="text-base text-foreground/60">Ciudad, País</p>
+                <p className="text-base text-foreground/60">Villa El Salvador, Lima, Perú</p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6 text-primary" />
-                <p className="text-base text-foreground/60">+00 123 456 789</p>
+                <p className="text-base text-foreground/60">+51 932 464 442</p>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-6 h-6 text-primary" />
-                <p className="text-base text-foreground/60">correo@ejemplo.com</p>
+                <p className="text-base text-foreground/60">sebalexa1@gmail.com</p>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ const Footer = () => {
               <Briefcase className="w-6 h-6 mr-2" /> Descargar CV
             </Button>
             <div className="mt-6 flex justify-center md:justify-end gap-6">
-              <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
+              <Button variant="ghost" className="rounded-full hover:text-primary">
                 <Github className="w-7 h-7" />
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
@@ -54,17 +54,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Divider Line */}
         <div className="border-t border-white/10 mt-12"></div>
-        
+
         {/* Copyright */}
-        <div className="mt-6 text-center text-lg text-foreground/60 pb-6">
-          <p>© 2024 Tu Nombre. Todos los derechos reservados.</p>
+        <div className="mt-6 text-center text-lg text-foreground/60 pb-3">
+          <p>© 2024 Sebastian Villacrisis. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
   );
 };
-
 export default Footer;
