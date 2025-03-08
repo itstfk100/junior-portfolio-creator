@@ -39,8 +39,8 @@ const Projects = () => {
     <section id="projects" className="section-padding min-h-screen animate-fade-in [animation-delay:400ms]">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-12">
-          <Briefcase className="w-8 h-8 text-primary neon-glow" />
-          <h2 className="text-4xl md:text-5xl font-bold neon-glow">Mis Proyectos</h2>
+          <Briefcase className="w-8 h-8 text-primary" />
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">Mis Proyectos</h2>
         </div>
 
         <div className="relative">
@@ -66,18 +66,18 @@ const Projects = () => {
                   {projects[currentProject].tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm border border-primary/20 shadow-[0_0_10px_rgba(59,130,246,0.3)]"
+                      className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm border border-primary/20"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <Button variant="default" size="lg" className="gap-2 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                  <Button variant="default" size="lg" className="gap-2">
                     <ExternalLink className="w-4 h-4" />
                     Proyecto
                   </Button>
-                  <Button variant="outline" size="lg" className="gap-2 shadow-[0_0_10px_rgba(59,130,246,0.3)]">
+                  <Button variant="outline" size="lg" className="gap-2">
                     <Github className="w-4 h-4" />
                     GitHub
                   </Button>
