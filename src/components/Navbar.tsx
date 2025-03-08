@@ -48,19 +48,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex md:flex-1 md:justify-center md:items-center">
-            <div 
-              className="relative px-5 py-2 rounded-full bg-secondary/30 backdrop-blur-sm shadow-md transition-all duration-300 hover:shadow-lg"
-              style={{
-                backgroundImage: 'linear-gradient(90deg, transparent 50%, transparent 50%), linear-gradient(90deg, transparent 50%, transparent 50%), linear-gradient(0deg, transparent 50%, transparent 50%), linear-gradient(0deg, transparent 50%, transparent 50%)',
-                backgroundPosition: '0% 0%, 100% 100%, 0% 100%, 100% 0%',
-                backgroundSize: '200% 2px, 200% 2px, 2px 200%, 2px 200%',
-                backgroundRepeat: 'no-repeat',
-                animation: 'border-line 4s infinite linear',
-                '--gradient': 'linear-gradient(to right, transparent, rgba(139, 92, 246, 1), rgba(96, 165, 250, 1), rgba(236, 72, 153, 1), transparent)',
-                '--mask-image': 'var(--gradient)',
-                '--mask-size': '200% 100%'
-              }}
-            >
+            <div className="relative px-5 py-2 rounded-full bg-secondary/30 backdrop-blur-sm shadow-md transition-all duration-300 hover:shadow-lg animated-border">
               <div className="flex items-center space-x-5">
                 {menuItems.map((item) => (
                   <a
