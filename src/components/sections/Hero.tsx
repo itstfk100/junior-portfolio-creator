@@ -10,17 +10,14 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-6xl md:text-8xl font-bold mb-8 animate-text bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
-          Programador Junior
+      <div className="max-w-6xl mx-auto text-center mt-16">
+        <h1 className="w-full max-w-6xl whitespace-nowrap text-6xl md:text-8xl font-bold mb-8 animate-text bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+          Soy Sebastián Villacrisis
         </h1>
-        <p className="text-2xl md:text-3xl text-foreground/80 max-w-3xl mx-auto mb-12 font-light tracking-wide drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">
+        <p className="text-2xl md:text-3xl font-semibold tracking-wide max-w-3xl mx-auto mt-8 mb-16 bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">
           Apasionado por el desarrollo web y en busca de mi primera oportunidad profesional
         </p>
-        <Button 
-          onClick={scrollToContact}
-          className="gap-2 text-lg px-8 py-6 bg-primary/20 hover:bg-primary/30 backdrop-blur-sm border border-primary/30 shadow-[0_0_15px_rgba(139,92,246,0.3)] hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all duration-300"
-        >
+        <Button onClick={scrollToContact} className="gap-2 text-lg px-6 py-6 animate-bounce">
           Contáctame
           <ArrowDown className="w-5 h-5" />
         </Button>
