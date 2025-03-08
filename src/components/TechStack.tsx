@@ -56,7 +56,7 @@ const TechStack = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-12">
           <Laptop className="w-8 h-8 text-primary neon-glow" />
-          <h2 className="text-4xl md:text-5xl font-bold neon-glow">Tech Stack</h2>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">Tech Stack</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {technologies.map((tech) => (
