@@ -166,3 +166,39 @@
     opacity: 0;
   }
 }
+
+@keyframes border-top {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(500%);
+  }
+}
+
+@keyframes border-right {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes border-bottom {
+  0% {
+    transform: translateX(500%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes border-left {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

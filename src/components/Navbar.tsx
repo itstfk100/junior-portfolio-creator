@@ -48,7 +48,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex md:flex-1 md:justify-center md:items-center">
-            <div className="relative px-5 py-2 rounded-full bg-secondary/30 backdrop-blur-sm border border-primary/20 shadow-md transition-all duration-300 hover:shadow-lg hover:border-primary/30 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-0.5 before:bg-gradient-to-r before:from-purple-400 before:via-blue-400 before:to-pink-400 before:transform before:origin-left before:animate-[navline_2s_linear_infinite]">
+            <div className="relative px-5 py-2 rounded-full bg-secondary/30 backdrop-blur-sm border border-primary/20 shadow-md transition-all duration-300 hover:shadow-lg hover:border-primary/30">
               <div className="flex items-center space-x-5">
                 {menuItems.map((item) => (
                   <a
@@ -61,6 +61,12 @@ const Navbar = () => {
                     {item.name}
                   </a>
                 ))}
+              </div>
+              <div className="absolute inset-0 rounded-full overflow-hidden">
+                <div className="absolute h-[2px] w-[20%] bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 top-0 left-0 animate-[border-top_4s_linear_infinite]"></div>
+                <div className="absolute h-full w-[2px] bg-gradient-to-b from-purple-400 via-blue-400 to-pink-400 top-0 right-0 animate-[border-right_4s_linear_infinite_1s]"></div>
+                <div className="absolute h-[2px] w-[20%] bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bottom-0 right-0 animate-[border-bottom_4s_linear_infinite_2s]"></div>
+                <div className="absolute h-full w-[2px] bg-gradient-to-b from-purple-400 via-blue-400 to-pink-400 top-0 left-0 animate-[border-left_4s_linear_infinite_3s]"></div>
               </div>
             </div>
           </div>
