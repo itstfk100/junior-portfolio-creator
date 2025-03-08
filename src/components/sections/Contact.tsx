@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-12">
           <Mail className="w-8 h-8 text-primary neon-glow" />
-          <h2 className="text-4xl md:text-5xl font-bold neon-glow">Contacto</h2>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">Contacto</h2>
         </div>
         <div className="card-gradient p-12 rounded-xl">
           <p className="text-foreground/80 mb-8 text-lg">
