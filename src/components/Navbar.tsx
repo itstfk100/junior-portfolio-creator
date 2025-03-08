@@ -48,18 +48,14 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex md:flex-1 md:justify-center md:items-center">
-            <div className="relative px-5 py-2 rounded-full bg-secondary/30 backdrop-blur-sm border border-primary/20 shadow-md transition-all duration-300 hover:shadow-lg hover:border-primary/30">
+            <div className="relative px-5 py-2 rounded-full bg-secondary/30 backdrop-blur-sm border border-primary/20 shadow-md transition-all duration-300 hover:shadow-lg hover:border-primary/30 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-0.5 before:bg-gradient-to-r before:from-purple-400 before:via-blue-400 before:to-pink-400 before:transform before:origin-left before:animate-[navline_2s_linear_infinite]">
               <div className="flex items-center space-x-5">
                 {menuItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className={`flex items-center gap-2 px-3 py-1.5 rounded-md font-medium transition-all duration-300 relative 
-                  ${activeSection === item.id ? 'text-primary' : 'text-foreground/80 hover:text-primary'}
-                  before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-0.5 
-                  before:bg-gradient-to-r before:from-purple-400 before:via-blue-400 before:to-pink-400
-                  before:transform before:origin-left
-                  before:animate-[navline_2s_linear_infinite]`}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-md font-medium transition-all duration-300
+                    ${activeSection === item.id ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`}
                   >
                     {item.icon}
                     {item.name}
