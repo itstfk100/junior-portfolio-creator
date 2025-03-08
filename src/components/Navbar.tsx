@@ -48,7 +48,19 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex md:flex-1 md:justify-center md:items-center">
-            <div className="relative px-5 py-2 rounded-full bg-secondary/30 backdrop-blur-sm border border-primary/20 shadow-md transition-all duration-300 hover:shadow-lg hover:border-primary/30">
+            <div 
+              className="relative px-5 py-2 rounded-full bg-secondary/30 backdrop-blur-sm shadow-md transition-all duration-300 hover:shadow-lg"
+              style={{
+                backgroundImage: 'linear-gradient(90deg, transparent 50%, transparent 50%), linear-gradient(90deg, transparent 50%, transparent 50%), linear-gradient(0deg, transparent 50%, transparent 50%), linear-gradient(0deg, transparent 50%, transparent 50%)',
+                backgroundPosition: '0% 0%, 100% 100%, 0% 100%, 100% 0%',
+                backgroundSize: '200% 2px, 200% 2px, 2px 200%, 2px 200%',
+                backgroundRepeat: 'no-repeat',
+                animation: 'border-line 4s infinite linear',
+                '--gradient': 'linear-gradient(to right, transparent, rgba(139, 92, 246, 1), rgba(96, 165, 250, 1), rgba(236, 72, 153, 1), transparent)',
+                '--mask-image': 'var(--gradient)',
+                '--mask-size': '200% 100%'
+              }}
+            >
               <div className="flex items-center space-x-5">
                 {menuItems.map((item) => (
                   <a
@@ -61,12 +73,6 @@ const Navbar = () => {
                     {item.name}
                   </a>
                 ))}
-              </div>
-              <div className="absolute inset-0 rounded-full overflow-hidden">
-                <div className="absolute h-[2px] w-[20%] bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 top-0 left-0 animate-[border-top_4s_linear_infinite]"></div>
-                <div className="absolute h-full w-[2px] bg-gradient-to-b from-purple-400 via-blue-400 to-pink-400 top-0 right-0 animate-[border-right_4s_linear_infinite_1s]"></div>
-                <div className="absolute h-[2px] w-[20%] bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bottom-0 right-0 animate-[border-bottom_4s_linear_infinite_2s]"></div>
-                <div className="absolute h-full w-[2px] bg-gradient-to-b from-purple-400 via-blue-400 to-pink-400 top-0 left-0 animate-[border-left_4s_linear_infinite_3s]"></div>
               </div>
             </div>
           </div>
