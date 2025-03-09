@@ -47,9 +47,10 @@ const Navbar = () => {
             <span className="text-xl font-bold text-primary">Portfolio</span>
           </div>
 
-          {/* Contenedor de la barra de navegación con la animación */}
-          <div className="relative">
-            <div className="relative px-5 py-2 rounded-full bg-secondary/30 backdrop-blur-sm border border-primary/20 shadow-md transition-all duration-300 hover:shadow-lg hover:border-primary/30 nav-border-animation">
+          {/* Container de la barra de navegación con la animación */}
+          <div className="relative p-[3px]">
+            <div className="nav-border-animation"></div>
+            <div className="relative px-5 py-2 rounded-lg bg-secondary/30 backdrop-blur-sm shadow-md transition-all duration-300 hover:shadow-lg z-10">
               <div className="flex items-center space-x-5">
                 {menuItems.map((item) => (
                   <a
