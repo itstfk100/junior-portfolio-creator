@@ -1,7 +1,22 @@
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const LoadingScreen = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 1 }}
@@ -12,9 +27,35 @@ const LoadingScreen = () => {
           document.body.style.overflow = "auto";
         }
       }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#0d0d15]"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#0d0d15] overflow-hidden"
     >
-      <div className="relative text-center">
+      {/* Interactive background blobs */}
+      <motion.div
+        className="absolute w-[500px] h-[500px] rounded-full bg-purple-500/20 blur-[100px]"
+        animate={{
+          x: mousePosition.x - 250,
+          y: mousePosition.y - 250,
+        }}
+        transition={{
+          type: "spring",
+          damping: 30,
+          stiffness: 50,
+        }}
+      />
+      <motion.div
+        className="absolute w-[400px] h-[400px] rounded-full bg-blue-500/20 blur-[100px]"
+        animate={{
+          x: mousePosition.x - 200,
+          y: mousePosition.y - 200,
+        }}
+        transition={{
+          type: "spring",
+          damping: 35,
+          stiffness: 55,
+        }}
+      />
+
+      <div className="relative text-center z-10">
         <motion.div
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
